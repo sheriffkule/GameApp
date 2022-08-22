@@ -7,9 +7,9 @@ import {
   FlatList,
   useWindowDimensions,
 } from 'react-native';
-import Icon from 'react-native-ionicons';
-import GuessLogItems from '../components/game/GuessLogItem';
 
+import Icon from 'react-native-vector-icons/Ionicons';
+import GuessLogItems from '../components/game/GuessLogItem';
 import NumberContainer from '../components/game/NumberContainer';
 import Card from '../components/ui/Card';
 import InstructionText from '../components/ui/InstructionText';
@@ -83,12 +83,12 @@ function GameScreen({userNumber, onGameOver}) {
         <View style={styles.buttonsContainer}>
           <View style={styles.buttonContainer}>
             <PrimaryButton onPress={nextGuessHandler.bind(this, 'lower')}>
-              <Icon name="md-remove" size={25} color="green" />-
+              <Icon name="md-remove" size={45} color="green" />
             </PrimaryButton>
           </View>
           <View>
             <PrimaryButton onPress={nextGuessHandler.bind(this, 'greater')}>
-              <Icon name="md-add" size={25} color="green" />+
+              <Icon name="md-add" size={45} color="green" />
             </PrimaryButton>
           </View>
         </View>
@@ -102,13 +102,13 @@ function GameScreen({userNumber, onGameOver}) {
         <View style={styles.buttonsContainerWide}>
           <View style={styles.buttonContainer}>
             <PrimaryButton onPress={nextGuessHandler.bind(this, 'lower')}>
-              <Icon name="md-remove" size={25} color="green" />-
+              <Icon name="md-remove" size={30} color="blue" />
             </PrimaryButton>
           </View>
           <NumberContainer>{currentGuess}</NumberContainer>
           <View>
             <PrimaryButton onPress={nextGuessHandler.bind(this, 'greater')}>
-              <Icon name="md-add" size={25} color="green" />+
+              <Icon name="md-add" size={30} color="green" />
             </PrimaryButton>
           </View>
         </View>
